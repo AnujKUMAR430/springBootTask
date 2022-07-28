@@ -1,4 +1,4 @@
-package com.example.helloWorld.HelloWorld;
+package com.example.helloWorld.first_task;
 
 public class HelloWorld {
 
