@@ -22,10 +22,10 @@ public class SpringBootApplication {
         return helloWorld;
     }
 
-    @GetMapping("/addition")
+    @GetMapping(path = "addition")
     public Addition addition() {
-        Addition addition = new Addition(1);
-        return addition;
+        Addition add = new Addition(1);
+        return add;
     }
 
 
