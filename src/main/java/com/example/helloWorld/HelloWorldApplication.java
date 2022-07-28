@@ -17,7 +17,7 @@ public class HelloWorldApplication {
 	}
 
 
-	@GetMapping(name = "helloWorld")
+	@GetMapping(path = "helloWorld")
 	public HelloWorld hello() {
 		 HelloWorld helloWorld = new HelloWorld("Hello World");
 		 return  helloWorld;
