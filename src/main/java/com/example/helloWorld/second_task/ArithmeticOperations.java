@@ -1,14 +1,14 @@
 package com.example.helloWorld.second_task;
 
-public class Addition {
+public class ArithmeticOperations {
 
     private int data;
 
-    public Addition(int data) {
+    public ArithmeticOperations(int data) {
         this.data = data;
     }
 
-    public Addition() {
+    public ArithmeticOperations() {
     }
 
     public int getData() {

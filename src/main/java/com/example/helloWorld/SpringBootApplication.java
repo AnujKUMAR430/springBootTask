@@ -1,7 +1,7 @@
 package com.example.helloWorld;
 
 import com.example.helloWorld.first_task.HelloWorld;
-import com.example.helloWorld.second_task.Addition;
+import com.example.helloWorld.second_task.ArithmeticOperations;
 import org.springframework.boot.SpringApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,8 +24,8 @@ public class SpringBootApplication {
 
     // Second Task
     @GetMapping("/addition")
-    public Addition addition() {
-        Addition add = new Addition(addNumber());
+    public ArithmeticOperations addition() {
+        ArithmeticOperations add = new ArithmeticOperations(addNumber());
         return add;
     }
     int addNumber(){
@@ -37,8 +37,8 @@ public class SpringBootApplication {
     }
 
     @GetMapping(path = "division")
-    public Addition divide() {
-        Addition div = new Addition(divideNumber());
+    public ArithmeticOperations divide() {
+        ArithmeticOperations div = new ArithmeticOperations(divideNumber());
         return div;
     }
     int divideNumber(){
