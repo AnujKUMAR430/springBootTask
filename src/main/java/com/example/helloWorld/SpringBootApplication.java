@@ -24,8 +24,17 @@ public class SpringBootApplication {
 
     @GetMapping("/addition")
     public Addition addition() {
-        Addition add = new Addition(1);
+        Addition add = new Addition(additions());
         return add;
+    }
+    int additions(){
+        int num1 = 5;
+        int num2 = 5;
+        int add = num1 + num2;
+        System.out.println(add);
+        return add;
+
+
     }
 
 
