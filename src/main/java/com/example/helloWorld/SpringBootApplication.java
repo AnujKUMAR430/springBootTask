@@ -1,19 +1,18 @@
 package com.example.helloWorld;
 
-import com.example.helloWorld.HelloWorldClass.HelloWorld;
+import com.example.helloWorld.HelloWorld.HelloWorld;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
 
-@SpringBootApplication
+@org.springframework.boot.autoconfigure.SpringBootApplication
 @RestController
-public class HelloWorldApplication {
+public class SpringBootApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HelloWorldApplication.class, args);
+		SpringApplication.run(SpringBootApplication.class, args);
 	}
 
 
