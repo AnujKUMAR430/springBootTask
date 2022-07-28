@@ -22,21 +22,32 @@ public class SpringBootApplication {
         return helloWorld;
     }
 
+    // Second Task
     @GetMapping("/addition")
     public Addition addition() {
-        Addition add = new Addition(additions());
+        Addition add = new Addition(addNumber());
         return add;
     }
-    int additions(){
+    int addNumber(){
         int num1 = 5;
         int num2 = 5;
         int add = num1 + num2;
         System.out.println(add);
         return add;
-
-
     }
 
+    @GetMapping(path = "division")
+    public Addition divide() {
+        Addition div = new Addition(divideNumber());
+        return div;
+    }
+    int divideNumber(){
+        int num1 = 10;
+        int num2 = 5;
+        int div = num1 / num2;
+        System.out.println(div);
+        return div;
+    }
 
 
 
