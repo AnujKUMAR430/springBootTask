@@ -1,7 +1,7 @@
 package com.example.helloWorld;
 
-import com.example.helloWorld.first_task.HelloWorld;
-import com.example.helloWorld.second_task.ArithmeticOperations;
+import com.example.helloWorld.first_task.HelloWorldClass;
+import com.example.helloWorld.second_task.ArithmeticOperationsClass;
 import org.springframework.boot.SpringApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,15 +17,15 @@ public class SpringBootApplication {
 
     // first task
     @GetMapping("/helloWorld")
-    public HelloWorld hello() {
-        HelloWorld helloWorld = new HelloWorld("Hello World");
+    public HelloWorldClass hello() {
+        HelloWorldClass helloWorld = new HelloWorldClass("Hello World");
         return helloWorld;
     }
 
     // Second Task
     @GetMapping("/addition")
-    public ArithmeticOperations addition() {
-        ArithmeticOperations add = new ArithmeticOperations(addNumber());
+    public ArithmeticOperationsClass addition() {
+        ArithmeticOperationsClass add = new ArithmeticOperationsClass(addNumber());
         return add;
     }
     int addNumber(){
@@ -36,9 +36,9 @@ public class SpringBootApplication {
         return add;
     }
 
-    @GetMapping(path = "division")
-    public ArithmeticOperations divide() {
-        ArithmeticOperations div = new ArithmeticOperations(divideNumber());
+    @GetMapping("/division")
+    public ArithmeticOperationsClass divide() {
+        ArithmeticOperationsClass div = new ArithmeticOperationsClass(divideNumber());
         return div;
     }
     int divideNumber(){
