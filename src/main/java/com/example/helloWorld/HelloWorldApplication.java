@@ -17,10 +17,12 @@ public class HelloWorldApplication {
 	}
 
 
-	@GetMapping(path = "helloWorld")
+	@GetMapping("/helloWorld")
 	public HelloWorld hello() {
 		 HelloWorld helloWorld = new HelloWorld("Hello World");
 		 return  helloWorld;
 	}
+
+
 
 }
