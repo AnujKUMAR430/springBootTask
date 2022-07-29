@@ -1,13 +1,13 @@
 package com.example.helloWorld.first_task;
 
-public class HelloWorldClass {
+public class CommonClass {
 
     private String data;
 
-    public HelloWorldClass() {
+    public CommonClass() {
     }
 
-    public HelloWorldClass(String data) {
+    public CommonClass(String data) {
         this.data = data;
     }
 
