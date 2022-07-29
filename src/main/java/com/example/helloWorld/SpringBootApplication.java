@@ -26,19 +26,18 @@ public class SpringBootApplication {
 
     // Second Task
     @GetMapping("/addition")
-    public CommonClass addition(@RequestParam double num1, @RequestParam double num2) {
-        double add = num1 + num2;
+    public CommonClass addition(@RequestParam double firstNum, @RequestParam double secondNum) {
+        double add = firstNum + secondNum;
         CommonClass addition = new CommonClass(Double.toString(add));
         return addition;
     }
 
     @GetMapping("/division")
-    public CommonClass division(@RequestParam double num1, @RequestParam double num2) {
-        double add = num1 / num2;
-        CommonClass divide = new CommonClass(Double.toString(add));
+    public CommonClass division(@RequestParam double firstNum, @RequestParam double secondNum) {
+        double div = firstNum / secondNum;
+        CommonClass divide = new CommonClass(Double.toString(div));
 
         return divide;
     }
-
 
 }
