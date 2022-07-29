@@ -1,4 +1,4 @@
-package com.example.helloWorld.first_task;
+package com.example.helloWorld.common_class;
 
 public class CommonClass {
 

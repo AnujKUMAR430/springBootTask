@@ -1,7 +1,7 @@
 package com.example.helloWorld;
 
 
-import com.example.helloWorld.first_task.CommonClass;
+import com.example.helloWorld.common_class.CommonClass;
 import org.springframework.boot.SpringApplication;
 
 import org.springframework.web.bind.annotation.GetMapping;
