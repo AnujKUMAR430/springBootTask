@@ -24,13 +24,16 @@ public class SpringBootApplication {
         return helloWorld;
     }
 
-    // Second Task
+    // Second Task(addition)
+
     @GetMapping("/addition")
     public CommonClass addition(@RequestParam double firstNum, @RequestParam double secondNum) {
         double add = firstNum + secondNum;
         CommonClass addition = new CommonClass(Double.toString(add));
         return addition;
     }
+
+    // Second Task(division)
 
     @GetMapping("/division")
     public CommonClass division(@RequestParam double firstNum, @RequestParam double secondNum) {
