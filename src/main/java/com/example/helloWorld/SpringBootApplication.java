@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.nio.file.Path;
+
 @org.springframework.boot.autoconfigure.SpringBootApplication
 @RestController
 public class SpringBootApplication {
@@ -38,6 +40,18 @@ public class SpringBootApplication {
         CommonClass divide = new CommonClass(Double.toString(div));
 
         return divide;
+    }
+    @GetMapping(path = "multiply")
+    public CommonClass multiply(@RequestParam double num1, @RequestParam double num2){
+        double mul = num1 * num2;
+        CommonClass multiplication = new CommonClass(Double.toString(mul));
+        return multiplication;
+    }
+    @GetMapping(path = "subtract")
+    public CommonClass sub(@RequestParam double firstNum, @RequestParam double secondNum){
+        double subtraction = firstNum - secondNum;
+        CommonClass subtract = new CommonClass(Double.toString(subtraction));
+        return subtract;
     }
 
 }
