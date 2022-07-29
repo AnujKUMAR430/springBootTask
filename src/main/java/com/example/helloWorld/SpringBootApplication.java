@@ -65,7 +65,7 @@ public class SpringBootApplication {
         }
 
 
-        @GetMapping(path = "addInput")
+        @GetMapping(path = "anuj")
         public ResponseEntity<Object> getAddition(@RequestParam Integer a, @RequestParam Integer b) {
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("data", addition.sum(a, b));
