@@ -1,7 +1,7 @@
 package com.example.helloWorld;
 
-import com.example.helloWorld.first_task.CommonClass;
 
+import com.example.helloWorld.first_task.CommonClass;
 import org.springframework.boot.SpringApplication;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,6 +31,7 @@ public class SpringBootApplication {
         CommonClass addition = new CommonClass(Double.toString(add));
         return addition;
     }
+
     @GetMapping("/division")
     public CommonClass division(@RequestParam double num1, @RequestParam double num2) {
         double add = num1 / num2;
