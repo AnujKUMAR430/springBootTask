@@ -58,7 +58,6 @@ public class SpringBootApplication {
 
 
 
-    @RestController
     public class AdditionController {
 
         private final Addition addition;
@@ -68,7 +67,7 @@ public class SpringBootApplication {
         }
 
 
-        
+
         @GetMapping("/add")
         public ResponseEntity<Object> getAddition(@RequestParam Integer a, @RequestParam Integer b) {
             JSONObject jsonObject = new JSONObject();
