@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import net.minidev.json.JSONObject;
 
 
-
 @org.springframework.boot.autoconfigure.SpringBootApplication
 @RestController
 public class SpringBootApplication {
@@ -57,29 +56,27 @@ public class SpringBootApplication {
     }
 
 
-
-    public class AdditionController {
+    public class AddController {
 
         private final Addition addition;
 
-        public AdditionController(Addition addition) {
+        public AddController(Addition addition) {
             this.addition = addition;
         }
 
 
-
-        @GetMapping("/add")
+        @GetMapping(path = "addInput")
         public ResponseEntity<Object> getAddition(@RequestParam Integer a, @RequestParam Integer b) {
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("data", addition.sum(a, b));
             return ResponseEntity.ok(jsonObject);
         }
 
-        @Service
         public class Addition {
 
-            public int sum(int num1, int num2) {
-                return num1 + num2;
+            public int sum(int firstNum1, int secondNum2) {
+                int add = firstNum1 + secondNum2;
+                return add;
             }
         }
 
